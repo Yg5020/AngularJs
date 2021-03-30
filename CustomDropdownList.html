@@ -1,0 +1,23 @@
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+
+    </script>
+    <body>
+<div ng-app="myapp" ng-controller="myctrl">
+    <p>Select Enrollment number</p>
+    <input ng-model='test'>
+    <select ng-model="selectcar" ng-options="x for x in cities|filter:test"></select>
+     
+    
+
+</div>
+<script>
+ var app = angular.module('myapp', []).controller('myctrl', function($scope) {
+
+    $scope.cities=['delhi','mumbai','anand','baroda'];
+ });
+</script>
+
+    </body>
+
+</html>
